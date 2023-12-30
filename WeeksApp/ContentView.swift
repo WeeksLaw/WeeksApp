@@ -450,6 +450,7 @@ struct GalleryView: View {
 
 struct WritingView: View {
     var body: some View {
-        Text("WRITING PAGE")
+        Link("1. Facebook Research App Violates Apple's Privacy Policy", destination: URL(string: "https://github.com/WeeksLaw/weekswrites/blob/main/Facebook-Research-App-Violates-Apple-Privacy-Policy.pdf")!)
+        Link("2. Using Game Development to Teach C#", destination: URL(string: "https://github.com/WeeksLaw/weekswrites/blob/main/Using-Game-Development-to-Teach-C%23.pdf")!)
     }
 }
