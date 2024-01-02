@@ -19,7 +19,6 @@ struct ContentView: View {
         .init(title: "Home", imageName: "house"),
         .init(title: "About", imageName: "info.circle"),
         .init(title: "Gallery", imageName: "folder.fill"),
-        .init(title: "Writing", imageName: "folder")
     ]
     
     var body: some View {
@@ -36,8 +35,6 @@ struct ContentView: View {
                 AboutView()
             case 2:
                 GalleryView()
-            case 3:
-                WritingView()
             default:
                 MainView()
             }
@@ -75,12 +72,10 @@ struct ListView: View {
                         currentSelection = 2
                     case 2:
                         currentSelection = 3
-                    case 3:
-                        currentSelection = 4
                     default:
                         currentSelection = 1
                     }
-                    if currentSelection == 4 {
+                    if currentSelection == 3 {
                         currentSelection = 0
                     }
                 }
@@ -109,7 +104,7 @@ struct ContentView_Preview: PreviewProvider {
 
 struct AboutView: View {
     var body: some View {
-        Text("Weeks is a drone enthusiast with an interest in GIS, astronomy, artificial intelligence, and writing.")
+        Text("Weeks is a drone enthusiast with an interest in GIS, astronomy, artificial intelligence, game development, and writing.")
     }
 }
 
@@ -445,12 +440,5 @@ struct GalleryView: View {
                     .padding()
             }
         }
-    }
-}
-
-struct WritingView: View {
-    var body: some View {
-        Link("1. Facebook Research App Violates Apple's Privacy Policy", destination: URL(string: "https://github.com/WeeksLaw/weekswrites/blob/main/Facebook-Research-App-Violates-Apple-Privacy-Policy.pdf")!)
-        Link("2. Using Game Development to Teach C#", destination: URL(string: "https://github.com/WeeksLaw/weekswrites/blob/main/Using-Game-Development-to-Teach-C%23.pdf")!)
     }
 }
